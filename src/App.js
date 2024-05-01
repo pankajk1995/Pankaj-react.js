@@ -15,8 +15,6 @@ function App() {
       <div className="App">
         {/* Render either Fiction or NonFiction Based on the Condition */}
         {value?<Fiction/>:<NonFiction/>}
-
-
       </div>
     </div>
   );
