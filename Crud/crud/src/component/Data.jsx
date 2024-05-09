@@ -38,7 +38,7 @@ const Data = () => {
     const {title,price,description,image}=formdata
   return (
     <div>
-      <form onSubmit={handlesubmit}>
+      <form onSubmit={handlesubmit} style={{ textAlign: "center" }}>
         <input
         type='text'
         name="image"
