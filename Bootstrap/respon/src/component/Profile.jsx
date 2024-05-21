@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import '../App.css'
+
 const Profile = () => {
   return (
     <Container className='min'>
@@ -18,6 +19,10 @@ const Profile = () => {
             </p>
          
           <Button variant="primary" >I'm Available</Button>
+      
+     
+        
+        
         </Col>
 
         {/* Image Column */}
