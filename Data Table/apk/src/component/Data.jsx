@@ -11,10 +11,12 @@ const Data = () => {
     const [formdata,setformdata]=useState(initialdata)
 
     const handlesubmit=(e)=>{
+
         e.preventDefault();
         fetch("http://localhost:8080/productdata",{
             method:"POST",
             headers:{
+              'Accept': 'application/json',
                 "Content-Type":"application/json",
             },
             body:JSON.stringify(formdata)

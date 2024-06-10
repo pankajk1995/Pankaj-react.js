@@ -25,6 +25,8 @@ const Login = () => {
                     localStorage.setItem("token",data.token)
                 })
                 .catch((err)=>console.log(err))
+
+               
         }
   return (
     <div>
