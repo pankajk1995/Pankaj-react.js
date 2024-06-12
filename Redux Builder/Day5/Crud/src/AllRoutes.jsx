@@ -7,8 +7,9 @@ const AllRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path='/login' element={<Login/>}></Route>
+        
         <Route path='/' element={<Admin/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
         <Route path='*' element={<h1>404 page Not Found</h1>}></Route>
       </Routes>
     </div>
