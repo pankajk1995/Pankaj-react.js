@@ -1,0 +1,72 @@
+.App
+{
+  text-align: center;
+}
+.img
+{
+  height: 150px;
+  width: 150px;
+}
+.maindiv
+{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  padding: 40px;
+}
+.maindiv:hover{
+  background-color:blueviolet;
+}
+.scDiv
+{
+  border: 1px solid rgb(94, 77, 77);
+  padding: 20px;
+  text-align: justify;
+  border-radius: 10px;  
+
+}
+.op
+{
+  margin: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(67, 122, 21);
+  font-weight: bold;
+  border: none;
+}
+.para
+{
+  font-size: 10px;
+  height: 100px;
+}
+.post
+{
+  margin: 10px;
+  padding: 5px 20px;
+  background-color: azure;
+  border-radius: 5px;
+
+}
+button
+{
+  padding: 8px 30px;
+  font-weight: bold;
+  background-color:rgb(168, 168, 179);
+  border: none;
+  border-radius: 5px;
+}
+button:hover
+{
+  background-color: rgb(57, 156, 127) ;
+}
+.linkto
+{
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer ;
+
+}
+.linkto:hover
+{
+  color:rgba(218, 233, 15, 0.534);
+}
