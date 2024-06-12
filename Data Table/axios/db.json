@@ -13,16 +13,11 @@
       }
     },
     {
-      "id": 5,
-      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-      "price": 695,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-      "category": "jewelery",
       "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-      "rating": {
-        "rate": 4.6,
-        "count": 400
-      }
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": "780",
+      "category": "jewelery",
+      "id": 5
     },
     {
       "id": 6,
@@ -148,10 +143,10 @@
     },
     {
       "image": "https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg",
-      "title": "dasf",
-      "price": "1313",
-      "category": "saff",
-      "id": 22
+      "title": "this is product",
+      "price": "1500",
+      "category": "womens",
+      "id": 23
     }
   ]
 }
