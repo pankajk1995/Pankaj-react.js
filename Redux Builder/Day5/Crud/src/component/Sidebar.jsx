@@ -6,10 +6,12 @@ const Sidebar = () => {
 
   const [category, setcategory] = useState(search.getAll("category") || []);
 
-  useEffect(() => {
-    setsearch({ category });
-  }, [category]);
+  const [sort,setsort]=useState(search.get("sort") || null)
 
+  useEffect(() => {
+    setsearch({ category ,sort});
+  }, [category,sort]);
+console.log(category);
   const handleSubmit = (e) => {
     let { value } = e.target;
 
@@ -60,6 +62,12 @@ const Sidebar = () => {
           <br />
         </div>
       </div>
+      <br/>
+      <select>
+        <option >Select Price</option>
+        <option value="price" onChange={()=>setsort("asc")}>LowToHight</option>
+        <option value = "price"onChange={()=>setsort("desc")}>HighToLow</option>
+      </select>
     </div>
   );
 };
