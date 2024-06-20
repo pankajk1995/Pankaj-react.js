@@ -1,38 +1,46 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS } from '../Redux/actionType'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import { GetproductData } from '../Redux/Product/action'
 
 const Productdata = () => {
     const dispatch=useDispatch()
-    const {isLoading,isError,data}=useSelector((store)=>store.ProductReducer)
+    const {isLoading,isError,data,totalpage}=useSelector((store)=>store.ProductReducer)
 
   const [search,setsearch]=useSearchParams()
+ console.log(totalpage)
+  // for pagination state
 
-    const GetproductData=()=>{
-       dispatch({type:GET_PRODUCT_REQUEST,payload:false})
+  const [page,setpage] =useState(1)
 
-       axios.get(" http://localhost:8080/product",{
+    useEffect(()=>{
+      let paramobj={
+    
         params:{
           category:search.getAll("category"),
           _sort:"price",
-          _order:search.get("sort")
+          _order:search.get("sort"),
+          _limit:5,
+          _page:page
         }
-       }).then((res)=>{
-        dispatch({type:GET_PRODUCT_REQUEST,payload:false})
-        dispatch({type:GET_PRODUCT_SUCCESS,payload:res.data})
-        console.log(res);
-       }).catch((err)=>{
-        dispatch({type:GET_PRODUCT_REQUEST,payload:false})
-        dispatch({type:GET_PRODUCT_FAILURE,payload:true})
-        console.log(err);
-       })
+       
+     }
+        dispatch(GetproductData(paramobj))
+    },[search,page])
+
+// Delete part
+    const handledelete=(id)=>{
+      axios.delete(`http://localhost:8080/product/${id}`).then((res)=>{
+        dispatch(GetproductData({}))
+        console.log(res)})
+      .catch((err)=>console.log(err))
     }
 
-    useEffect(()=>{
-        GetproductData()
-    },[search])
+    // update 
+
+    
   return isLoading ? <h1>Loading..</h1>:isError?<h1>Some thing went wrong</h1>:(
     <div>
         
@@ -42,10 +50,19 @@ const Productdata = () => {
         {<img src={el.image} alt="" height={200} width={200}/>}
         <p>{el.category}</p>
         <p>{el.price}</p>
+        <button onClick={()=>handledelete(el.id)}>Delete</button>
+       <Link to={`/edit/${el.id}`}><button >Edit</button></Link> 
+       <Link to={`/editadll/${el.id}`}><button>Edit all data</button></Link>
         </div>
       </div>))}
     </div>
+    <div style={{marginTop:"25px",textAlign:"center"}}>
+      <button disabled={page==1} onClick={()=>setpage(page-1)}>Pre</button>
+      <button>{page}</button>
+      <button disabled={page==Math.ceil(totalpage/5)} onClick={()=>setpage(page+1)}>Next</button>
+      </div>
     </div>
+   
   )
 }
 

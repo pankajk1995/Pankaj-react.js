@@ -63,11 +63,14 @@ console.log(category);
         </div>
       </div>
       <br/>
-      <select>
+      <input type="radio" name="price" onChange={()=>setsort("asc")}/>LowToHigh
+      <input type="radio" name="price" onChange={()=>setsort("desc")}/>HighToLow
+      {/* <select>
         <option >Select Price</option>
         <option value="price" onChange={()=>setsort("asc")}>LowToHight</option>
         <option value = "price"onChange={()=>setsort("desc")}>HighToLow</option>
-      </select>
+      </select> */}
+      
     </div>
   );
 };

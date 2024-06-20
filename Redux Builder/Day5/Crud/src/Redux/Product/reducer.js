@@ -3,7 +3,8 @@ import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, POST_PRO
 let initialstate={
     isLoading:false,
     isError:false,
-    data:[]
+    data:[],
+    totalpage:1
 }
 export const reducer =(state=initialstate,{type,payload})=>{
     switch(type){
@@ -26,7 +27,7 @@ export const reducer =(state=initialstate,{type,payload})=>{
                         }
                         case GET_PRODUCT_SUCCESS:
                             {
-                                return{...state,data:payload}
+                                return{...state,data:payload.data,totalpage:payload.page}
                             }
                             case GET_PRODUCT_FAILURE:
                                 {

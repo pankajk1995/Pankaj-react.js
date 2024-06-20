@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { postdatafun } from "../Redux/Product/action";
+import axios from "axios";
 const initialstate = {
   title: "",
   price: "",
@@ -23,7 +24,8 @@ const Admin = () => {
     //dynamic object create karna
     setdate({ ...data, [e.target.name]: e.target.value });
   };
-
+ 
+  
   const handlesubmit = (e) => {
     e.preventDefault();
     dispatch(postdatafun(data));
