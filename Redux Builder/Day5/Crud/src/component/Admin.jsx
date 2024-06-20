@@ -33,6 +33,7 @@ const Admin = () => {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Admin Page</h1>
+      
       <form onSubmit={handlesubmit}>
         <div
           style={{
