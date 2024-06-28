@@ -1,7 +1,8 @@
 import React from 'react'
 import { store } from './Redux/store'
 import {useDispatch,useSelector} from 'react-redux'
-import { AddToCounter, SubToCounter } from './Redux/action'
+import { AddToCounter, SubToCounter } from './Redux/counter/action'
+
 const Counter = () => {
     // let {getState,dispatch,subscribe}=store
 
@@ -10,13 +11,23 @@ const Counter = () => {
     let counter=useSelector((store)=>store.counter)
   return (
     <div>
-      <h1>{counter}</h1>
+      <div style={{display:"flex",justifyContent:"space-evenly",height:"40px",width:"auto",borderRadius:"3px"}}>
+    <button>Switch To Light</button>
+    <button>Switch To Dark</button>
+    </div>
+    <div style={{height:"400px",width:"790px",border:"3px solid black",textAlign:"center",margin:"auto",marginTop:"20px"}}>
+      
+      <h1>Counter<br></br>
+        {counter}</h1>
+      <div style={{display:"flex",justifyContent:"space-around",height:"40px",width:"auto",borderRadius:"3px"}}>
       <button onClick={()=>{
         dispatch((AddToCounter(1)))
-      }}>+</button>
-      <button onClick={()=>{
+      }}>ADD</button>
+      <button disabled={counter==0}onClick={()=>{
         dispatch((SubToCounter(1)))
-      }}>-</button>
+      }}>REDUCE</button>
+      </div>
+    </div>
     </div>
   )
 }

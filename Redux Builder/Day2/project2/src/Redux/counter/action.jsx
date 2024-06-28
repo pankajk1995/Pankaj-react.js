@@ -1,4 +1,5 @@
-import { ADD, SUB } from "./ActionType"
+import { ADD, SUB } from "../ActionType"
+
 
 export function AddToCounter(val){
     return {type:ADD,payload:val}
