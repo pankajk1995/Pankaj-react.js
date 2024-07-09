@@ -1,8 +1,13 @@
-# React + Vite
+Main Page
+![image](https://github.com/pankajk1995/Pankaj-react.js/assets/168602250/f4d1fb5c-a802-48ff-81b4-723ede19d9eb)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+At Login Time Page
 
-Currently, two official plugins are available:
+![image](https://github.com/pankajk1995/Pankaj-react.js/assets/168602250/d49e8b07-7adf-4b0d-8fdd-178cf21a7958)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+after Login we get data on dashboard
+
+![image](https://github.com/pankajk1995/Pankaj-react.js/assets/168602250/e36c0017-374b-4569-80cd-4b3578fad37d)
+
+
+
