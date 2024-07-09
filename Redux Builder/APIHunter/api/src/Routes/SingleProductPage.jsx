@@ -18,7 +18,7 @@ function SingleProductPage(){
     },[data])
 
     return (
-        <div data-testid="products-container" style={{border:"1px solid black", height:"auto", width:"50%", margin}}>   
+        <div data-testid="products-container" style={{border:"1px solid black", height:"auto", width:"50%", margin:"auto"}}>   
             <div>
                 <h3 data-testid="product-brand">{data.brand}</h3>
             </div>
