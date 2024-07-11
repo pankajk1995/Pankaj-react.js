@@ -9,6 +9,9 @@ Dashbord
 
 ![image](https://github.com/pankajk1995/Pankaj-react.js/assets/168602250/2b9d5875-b28e-4a4d-8322-150e2e5353fc)
 
+Post Page
+
+![image](https://github.com/pankajk1995/Pankaj-react.js/assets/168602250/7ce6b129-2b7b-4dc2-a97f-b6a6b0737d29)
 
 Issue
 
