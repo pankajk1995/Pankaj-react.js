@@ -1,0 +1,1 @@
+in Middlecontent i call every component
