@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Catalogue = () => {
+ const Catalogue = () => {
   return (
     <div>
-     <h1>Hi</h1> 
+     <h1>this is catlogue page</h1> 
     </div>
   )
 }
-
+export default Catalogue;
 

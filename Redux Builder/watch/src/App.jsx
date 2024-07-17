@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import { Navbar } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import Navbars from './component/Navbars';
 import Slide from './component/Slide';
 import './App.css'
+import Allroutes from './Allroutes';
 function App() {
   return (
     <>
+    <Allroutes/>
      <Navbars/>
      <Slide/>
     </>

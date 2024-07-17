@@ -12,6 +12,8 @@ const Navbars = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as ={Link} to='/catalogue'>CATALOGUE</Nav.Link>
+            <Nav.Link as ={Link} to='/product'>PRODUCT</Nav.Link>
+
             <Nav.Link href="/vintage">VINTAGE</Nav.Link>
             <Nav.Link href="/investir">INVESTIR</Nav.Link>
             <Nav.Link href="/financer">FINANCER</Nav.Link>

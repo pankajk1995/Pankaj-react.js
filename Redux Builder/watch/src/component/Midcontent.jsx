@@ -3,6 +3,7 @@ import { Container, Row, Col, Image, Button ,Form, Table} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './Banner';
 import Footer from './Footer';
+import Product from './Product';
 // Assuming you have custom styles for positioning and responsiveness
 
 const Midcontent = () => {
@@ -128,6 +129,7 @@ const Midcontent = () => {
     </Container>
     <Banner/>
     <Footer/>
+   
     </Container>
 
     // call here banner 

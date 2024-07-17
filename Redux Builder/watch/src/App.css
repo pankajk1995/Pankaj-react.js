@@ -387,3 +387,63 @@ li a {
   color: white;
   text-decoration: none;
 }
+
+/* Product Css */
+.product-container {
+  margin-top: 15px;
+  background-color: grey;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.watch-items {
+  border: 2px solid green;
+  padding: 10px;
+  text-align: center;
+}
+
+.watch-image {
+  height: 200px;
+  width: 200px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .watch-image {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .watch-image {
+    height: 100px;
+    width: 100px;
+  }
+}
+/* details*/
+.imagealign{
+  display: grid;
+  place-items: center;
+  height: 100vh; /* or any specific height */
+}
+
